@@ -5,14 +5,59 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	
+	<title>Férias BR</title>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	<script src="map.js"></script>
 	<link rel="stylesheet" href=".././public/styles.css">
 	<link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-	
+<body class="min-h-screen grid">
+	<header class="h-20">
+		<nav class="flex items-center top-0 z-20 w-full fixed justify-between flex-wrap bg-blue-300 p-6">
+			<div class="flex items-center flex-shrink-0 text-blue-700 mr-6">
+				<svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
+				</svg>
+				<span class="font-semibold text-xl tracking-tight">Férias BR</span>
+			</div>
+			<div class="block lg:hidden">
+				<button id="hamburguer"
+					class="flex items-center px-3 py-2 text-blue-700 border-none transition-colors hover:text-blue-500">
+					<svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+						<title>Menu</title>
+						<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+					</svg>
+				</button>
+			</div>
+			<div id="menu"
+				class=" animate-fade-in-down w-full hidden flex-grow lg:animate-none lg:flex lg:items-center lg:w-auto">
+				<div class="text-sm lg:flex-grow">
+					<a href="/src/" class="block mt-4 lg:inline-block lg:mt-0 text-blue-700 hover:text-white mr-4">
+						Início
+					</a>
+					<a href="/src/pacotes.html" class="block mt-4 lg:inline-block lg:mt-0 text-blue-700 hover:text-white mr-4">
+						Pacotes
+					</a>
+					<a href="/src/search.html" class="block mt-4 lg:inline-block lg:mt-0 text-blue-700 hover:text-white">
+						Buscar destinos
+					</a>
+				</div>
+				<div>
+					<a href="/src/contato.html"
+						class="inline-block text-sm px-4 py-2 leading-none bg-blue-700 rounded text-blue-200  transition-opacity hover:opacity-90 mt-4 lg:mt-0">
+						Contato
+					</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+
+
+	<script src="menu.js"></script>
 </body>
 
 </html>
