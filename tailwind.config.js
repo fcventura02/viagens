@@ -4,17 +4,20 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      maxHeight: {
+        '500': '500px',
+       },
       keyframes: {
         "fade-in-down": {
           "0%": {
             opacity: "0",
             transform: "translateY(-10px)",
-            height: "0"
+            height: "0",
           },
           "100%": {
             opacity: "1",
             transform: "translateY(0)",
-            height: "100%"
+            height: "100%",
           },
         },
       },
@@ -26,6 +29,16 @@ module.exports = {
         blue: colors.lightBlue,
         red: colors.rose,
         pink: colors.fuchsia,
+      },
+      backgroundImage: {
+        "rio-montanhas":
+          "url('/img/rio.webp')",
+        "casal-praia":
+          "url('/img/casal.webp')",
+        "cataratas":
+          "url('/img/cataratas.jpg')",
+        "comida":
+          "url('/img/comida.jpg')",
       },
     },
   },

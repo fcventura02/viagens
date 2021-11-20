@@ -6543,6 +6543,10 @@ video {
   max-height: 24rem;
 }
 
+.max-h-500 {
+  max-height: 500px;
+}
+
 .max-h-px {
   max-height: 1px;
 }
@@ -17821,6 +17825,22 @@ video {
 
 .bg-gradient-to-tl {
   background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+}
+
+.bg-rio-montanhas {
+  background-image: url('/img/rio.webp');
+}
+
+.bg-casal-praia {
+  background-image: url('/img/casal.webp');
+}
+
+.bg-cataratas {
+  background-image: url('/img/cataratas.jpg');
+}
+
+.bg-comida {
+  background-image: url('/img/comida.jpg');
 }
 
 .from-transparent {
@@ -32278,6 +32298,83 @@ video {
   content: none;
 }
 
+.carousel-selected{
+  opacity: 1;
+  transition: opacity 800ms ease-in-out;
+}
+
+.animate-openLoad{
+  opacity: 1;
+  -webkit-animation: openLoad 1s ease-in-out;
+          animation: openLoad 1s ease-in-out;
+}
+
+.animate-openLoadReverse{
+  opacity: 1;
+  -webkit-animation: openLoadReverse 1s ease-in-out;
+          animation: openLoadReverse 1s ease-in-out;
+}
+
+@-webkit-keyframes openLoad{
+  0%{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes openLoad{
+  0%{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes openLoadReverse{
+  0%{
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes openLoadReverse{
+  0%{
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+[data-scroll]{
+  opacity: 0;
+  will-change: scale, opacity;
+  transform: scale(0.93);
+  transition: all 1.5s  cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+[data-scroll="in"]{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -38220,6 +38317,10 @@ video {
 
   .sm\:max-h-96 {
     max-height: 24rem;
+  }
+
+  .sm\:max-h-500 {
+    max-height: 500px;
   }
 
   .sm\:max-h-px {
@@ -49406,6 +49507,22 @@ video {
 
   .sm\:bg-gradient-to-tl {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+  }
+
+  .sm\:bg-rio-montanhas {
+    background-image: url('/img/rio.webp');
+  }
+
+  .sm\:bg-casal-praia {
+    background-image: url('/img/casal.webp');
+  }
+
+  .sm\:bg-cataratas {
+    background-image: url('/img/cataratas.jpg');
+  }
+
+  .sm\:bg-comida {
+    background-image: url('/img/comida.jpg');
   }
 
   .sm\:from-transparent {
@@ -69455,6 +69572,10 @@ video {
     max-height: 24rem;
   }
 
+  .md\:max-h-500 {
+    max-height: 500px;
+  }
+
   .md\:max-h-px {
     max-height: 1px;
   }
@@ -80639,6 +80760,22 @@ video {
 
   .md\:bg-gradient-to-tl {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+  }
+
+  .md\:bg-rio-montanhas {
+    background-image: url('/img/rio.webp');
+  }
+
+  .md\:bg-casal-praia {
+    background-image: url('/img/casal.webp');
+  }
+
+  .md\:bg-cataratas {
+    background-image: url('/img/cataratas.jpg');
+  }
+
+  .md\:bg-comida {
+    background-image: url('/img/comida.jpg');
   }
 
   .md\:from-transparent {
@@ -100688,6 +100825,10 @@ video {
     max-height: 24rem;
   }
 
+  .lg\:max-h-500 {
+    max-height: 500px;
+  }
+
   .lg\:max-h-px {
     max-height: 1px;
   }
@@ -111872,6 +112013,22 @@ video {
 
   .lg\:bg-gradient-to-tl {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+  }
+
+  .lg\:bg-rio-montanhas {
+    background-image: url('/img/rio.webp');
+  }
+
+  .lg\:bg-casal-praia {
+    background-image: url('/img/casal.webp');
+  }
+
+  .lg\:bg-cataratas {
+    background-image: url('/img/cataratas.jpg');
+  }
+
+  .lg\:bg-comida {
+    background-image: url('/img/comida.jpg');
   }
 
   .lg\:from-transparent {
@@ -131921,6 +132078,10 @@ video {
     max-height: 24rem;
   }
 
+  .xl\:max-h-500 {
+    max-height: 500px;
+  }
+
   .xl\:max-h-px {
     max-height: 1px;
   }
@@ -143105,6 +143266,22 @@ video {
 
   .xl\:bg-gradient-to-tl {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+  }
+
+  .xl\:bg-rio-montanhas {
+    background-image: url('/img/rio.webp');
+  }
+
+  .xl\:bg-casal-praia {
+    background-image: url('/img/casal.webp');
+  }
+
+  .xl\:bg-cataratas {
+    background-image: url('/img/cataratas.jpg');
+  }
+
+  .xl\:bg-comida {
+    background-image: url('/img/comida.jpg');
   }
 
   .xl\:from-transparent {
@@ -163154,6 +163331,10 @@ video {
     max-height: 24rem;
   }
 
+  .\32xl\:max-h-500 {
+    max-height: 500px;
+  }
+
   .\32xl\:max-h-px {
     max-height: 1px;
   }
@@ -174338,6 +174519,22 @@ video {
 
   .\32xl\:bg-gradient-to-tl {
     background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+  }
+
+  .\32xl\:bg-rio-montanhas {
+    background-image: url('/img/rio.webp');
+  }
+
+  .\32xl\:bg-casal-praia {
+    background-image: url('/img/casal.webp');
+  }
+
+  .\32xl\:bg-cataratas {
+    background-image: url('/img/cataratas.jpg');
+  }
+
+  .\32xl\:bg-comida {
+    background-image: url('/img/comida.jpg');
   }
 
   .\32xl\:from-transparent {
