@@ -17828,19 +17828,19 @@ video {
 }
 
 .bg-rio-montanhas {
-  background-image: url('/img/rio.webp');
+  background-image: url('/viagens/img/rio.webp');
 }
 
 .bg-casal-praia {
-  background-image: url('/img/casal.webp');
+  background-image: url('/viagens/img/casal.webp');
 }
 
 .bg-cataratas {
-  background-image: url('/img/cataratas.jpg');
+  background-image: url('/viagens/img/cataratas.jpg');
 }
 
 .bg-comida {
-  background-image: url('/img/comida.jpg');
+  background-image: url('/viagens/img/comida.jpg');
 }
 
 .from-transparent {
@@ -32298,9 +32298,13 @@ video {
   content: none;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .carousel-selected{
   opacity: 1;
-  transition: opacity 800ms ease-in-out;
+  transition: opacity 1000ms ease-in-out;
 }
 
 .animate-openLoad{
@@ -49510,19 +49514,19 @@ video {
   }
 
   .sm\:bg-rio-montanhas {
-    background-image: url('/img/rio.webp');
+    background-image: url('/viagens/img/rio.webp');
   }
 
   .sm\:bg-casal-praia {
-    background-image: url('/img/casal.webp');
+    background-image: url('/viagens/img/casal.webp');
   }
 
   .sm\:bg-cataratas {
-    background-image: url('/img/cataratas.jpg');
+    background-image: url('/viagens/img/cataratas.jpg');
   }
 
   .sm\:bg-comida {
-    background-image: url('/img/comida.jpg');
+    background-image: url('/viagens/img/comida.jpg');
   }
 
   .sm\:from-transparent {
@@ -80763,19 +80767,19 @@ video {
   }
 
   .md\:bg-rio-montanhas {
-    background-image: url('/img/rio.webp');
+    background-image: url('/viagens/img/rio.webp');
   }
 
   .md\:bg-casal-praia {
-    background-image: url('/img/casal.webp');
+    background-image: url('/viagens/img/casal.webp');
   }
 
   .md\:bg-cataratas {
-    background-image: url('/img/cataratas.jpg');
+    background-image: url('/viagens/img/cataratas.jpg');
   }
 
   .md\:bg-comida {
-    background-image: url('/img/comida.jpg');
+    background-image: url('/viagens/img/comida.jpg');
   }
 
   .md\:from-transparent {
@@ -112016,19 +112020,19 @@ video {
   }
 
   .lg\:bg-rio-montanhas {
-    background-image: url('/img/rio.webp');
+    background-image: url('/viagens/img/rio.webp');
   }
 
   .lg\:bg-casal-praia {
-    background-image: url('/img/casal.webp');
+    background-image: url('/viagens/img/casal.webp');
   }
 
   .lg\:bg-cataratas {
-    background-image: url('/img/cataratas.jpg');
+    background-image: url('/viagens/img/cataratas.jpg');
   }
 
   .lg\:bg-comida {
-    background-image: url('/img/comida.jpg');
+    background-image: url('/viagens/img/comida.jpg');
   }
 
   .lg\:from-transparent {
@@ -143269,19 +143273,19 @@ video {
   }
 
   .xl\:bg-rio-montanhas {
-    background-image: url('/img/rio.webp');
+    background-image: url('/viagens/img/rio.webp');
   }
 
   .xl\:bg-casal-praia {
-    background-image: url('/img/casal.webp');
+    background-image: url('/viagens/img/casal.webp');
   }
 
   .xl\:bg-cataratas {
-    background-image: url('/img/cataratas.jpg');
+    background-image: url('/viagens/img/cataratas.jpg');
   }
 
   .xl\:bg-comida {
-    background-image: url('/img/comida.jpg');
+    background-image: url('/viagens/img/comida.jpg');
   }
 
   .xl\:from-transparent {
@@ -174522,19 +174526,19 @@ video {
   }
 
   .\32xl\:bg-rio-montanhas {
-    background-image: url('/img/rio.webp');
+    background-image: url('/viagens/img/rio.webp');
   }
 
   .\32xl\:bg-casal-praia {
-    background-image: url('/img/casal.webp');
+    background-image: url('/viagens/img/casal.webp');
   }
 
   .\32xl\:bg-cataratas {
-    background-image: url('/img/cataratas.jpg');
+    background-image: url('/viagens/img/cataratas.jpg');
   }
 
   .\32xl\:bg-comida {
-    background-image: url('/img/comida.jpg');
+    background-image: url('/viagens/img/comida.jpg');
   }
 
   .\32xl\:from-transparent {

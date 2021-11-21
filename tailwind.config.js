@@ -32,13 +32,13 @@ module.exports = {
       },
       backgroundImage: {
         "rio-montanhas":
-          "url('/img/rio.webp')",
+          "url('/viagens/img/rio.webp')",
         "casal-praia":
-          "url('/img/casal.webp')",
+          "url('/viagens/img/casal.webp')",
         "cataratas":
-          "url('/img/cataratas.jpg')",
+          "url('/viagens/img/cataratas.jpg')",
         "comida":
-          "url('/img/comida.jpg')",
+          "url('/viagens/img/comida.jpg')",
       },
     },
   },

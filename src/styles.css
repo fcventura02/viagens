@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+	scroll-behavior: smooth;
+}
+
 .carousel-selected{
 	opacity: 1;
 	transition: opacity 1000ms ease-in-out;
