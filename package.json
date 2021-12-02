@@ -15,5 +15,7 @@
     "postcss": "^8.3.11",
     "tailwindcss": "^2.2.19"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@tailwindcss/line-clamp": "^0.2.2"
+  }
 }
