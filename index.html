@@ -1,287 +1,674 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Férias BR</title>
+    <meta
+      name="description"
+      content="Férias BR é uma empresa que busca dar a seus clientes o máximo de lazer "
+    />
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Férias BR</title>
-	<meta name="description" content="Férias BR é uma empresa que busca dar a seus clientes o máximo de lazer ">
-	<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <link rel="stylesheet" href="./public/styles.css" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
 
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-	<script src="./src/map.js"></script>
+  <body class="min-h-screen">
+    <header class="h-20 top-0 z-20 w-full fixed bg-blue-400">
+      <nav
+        class="
+          bg-blue-400
+          flex
+          items-center
+          max-w-7xl
+          m-auto
+          justify-between
+          flex-wrap
+          p-6
+        "
+      >
+        <div class="flex items-center flex-shrink-0 text-gray-800 mr-6">
+          <svg
+            class="fill-current h-8 w-8 mr-2"
+            width="54"
+            height="54"
+            viewBox="0 0 54 54"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"
+            />
+          </svg>
+          <span class="font-semibold text-xl tracking-tight">Férias BR</span>
+        </div>
+        <div class="block lg:hidden">
+          <button
+            id="hamburguer"
+            class="
+              flex
+              items-center
+              px-3
+              py-2
+              text-gray-800
+              border-none
+              transition-colors
+              hover:text-gray-600
+            "
+          >
+            <svg
+              class="fill-current h-4 w-4"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div
+          id="menu"
+          class="
+            animate-fade-in-down
+            w-full
+            hidden
+            flex-grow
+            lg:animate-none lg:flex lg:items-center lg:w-auto
+          "
+        >
+          <div class="text-sm lg:flex-grow">
+            <a
+              href="index.html"
+              class="
+                block
+                mt-4
+                lg:inline-block lg:mt-0
+                text-gray-800
+                hover:text-gray-600
+                transition-colors
+                mr-4
+              "
+            >
+              Início
+            </a>
+            <a
+              href="packages.html"
+              class="
+                block
+                mt-4
+                lg:inline-block lg:mt-0
+                text-gray-800
+                hover:text-gray-600
+                transition-colors
+                mr-4
+              "
+            >
+              Pacotes
+            </a>
+            <a
+              href="search.html"
+              class="
+                block
+                mt-4
+                lg:inline-block lg:mt-0
+                text-gray-800
+                hover:text-gray-600
+                transition-colors
+              "
+            >
+              Buscar destinos
+            </a>
+          </div>
+          <div>
+            <a
+              id="link-contato"
+              href="index.html#contato"
+              class="
+                inline-block
+                text-sm
+                px-4
+                py-2
+                leading-none
+                bg-gray-800
+                rounded
+                text-blue-400
+                transition-opacity
+                hover:opacity-90
+                mt-4
+                lg:mt-0
+              "
+            >
+              Contato
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-	<link rel="stylesheet" href="./public/styles.css">
-	<link rel="stylesheet" href="./src/styles.css">
-</head>
+    <main class="bg-gray-50 mt-20">
+      <section data-scroll class="w-full pt-6 pb-6 bg-yellow-500">
+        <div class="max-w-7xl w-full p-6 m-auto flex flex-col md:flex-row">
+          <div class="md:w-1/2 m-auto">
+            <h2
+              class="
+                text-2xl text-gray-800
+                font-bold
+                pb-2
+                border-yellow-700 border-b border-dashed
+                mb-2
+                inline-block
+              "
+            >
+              Sobre nós
+            </h2>
+            <p class="text-gray-900 text-lg">
+              A Férias BR é uma empresa que esta no mercado com mais de 15 anos
+              de experiencia, que tem como foco o turismo brasileiro, oferecendo
+              aos nossos clientes as melhores experiencias que o país pode
+              oferecer.
+              <br />
+              Com isso demonstrar e compartilhar as coisas belas que nosso país
+              possuí, além de compartilhar nossa história e cultura.
+            </p>
+          </div>
+          <div
+            class="
+              md:w-1/2
+              w-full
+              mt-3
+              max-h-80
+              flex
+              justify-center
+              content-center
+            "
+          >
+            <img
+              class="w-full"
+              src="./img/Company-amico.svg"
+              alt="Pessoa trabalhando"
+            />
+          </div>
+        </div>
+      </section>
+      <section data-scroll class="w-full pt-6 pb-6 bg-blue-300">
+        <div
+          class="max-w-7xl w-full p-6 m-auto flex flex-col-reverse md:flex-row"
+        >
+          <div
+            class="
+              md:w-1/2
+              w-full
+              m-auto
+              max-h-80
+              flex
+              justify-center
+              content-center
+            "
+          >
+            <img
+              class="w-full"
+              src="./img/Traveling-amico.svg"
+              alt="Pessoa trabalhando"
+            />
+          </div>
+          <div class="md:w-1/2 m-auto">
+            <h2
+              class="
+                text-2xl text-gray-800
+                font-bold
+                pb-2
+                border-blue-700 border-b border-dashed
+                mb-2
+                inline-block
+              "
+            >
+              Nossos serviços
+            </h2>
+            <p class="text-gray-900 text-lg">
+              O ferecemos aos nossos clientes os melhores planos de viagens, com
+              as melhores ofertas, buscando os melhores lugares para hospedagem
+              com os melhores restaurantes da região.
+              <br />
+              Tudo isso para facilitar e oferecer a melhor experiencia durante
+              sua viagem.
+            </p>
+            <a
+              href="packages.html"
+              class="
+                mt-2
+                p-4
+                uppercase
+                h-full
+                text-gray-900
+                bg-yellow-400
+                inline-block
+                hover:bg-yellow-500 hover:text-gray-700
+                transition-colors
+              "
+              >Conferir pacotes</a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="contato" data-scroll class="w-full pt-6 pb-6 bg-yellow-500">
+        <div class="max-w-7xl w-full p-6 m-auto flex flex-col md:flex-row">
+          <div class="md:w-1/2 m-auto">
+            <h2
+              class="
+                text-2xl text-gray-800
+                font-bold
+                pb-2
+                border-yellow-700 border-b border-dashed
+                mb-2
+                inline-block
+              "
+            >
+              Siga nossas redes sociais
+            </h2>
+            <p class="text-gray-900 text-lg">
+              Siga nossas redes sociais e acompanhe nossas promoções
+            </p>
+            <div>
+              <a
+                href="#"
+                class="p-2 bg-blue-400 rounded-full inline-block text-gray-800"
+              >
+                <svg
+                  title="facebook"
+                  class="fill-current h-8 w-8"
+                  viewBox="0 0 50 50"
+                >
+                  <path
+                    d="M 25 3 C 12.861562 3 3 12.861562 3 25 C 3 36.019135 11.127533 45.138355 21.712891 46.728516 L 22.861328 46.902344 L 22.861328 29.566406 L 17.664062 29.566406 L 17.664062 26.046875 L 22.861328 26.046875 L 22.861328 21.373047 C 22.861328 18.494965 23.551973 16.599417 24.695312 15.410156 C 25.838652 14.220896 27.528004 13.621094 29.878906 13.621094 C 31.758714 13.621094 32.490022 13.734993 33.185547 13.820312 L 33.185547 16.701172 L 30.738281 16.701172 C 29.349697 16.701172 28.210449 17.475903 27.619141 18.507812 C 27.027832 19.539724 26.84375 20.771816 26.84375 22.027344 L 26.84375 26.044922 L 32.966797 26.044922 L 32.421875 29.564453 L 26.84375 29.564453 L 26.84375 46.929688 L 27.978516 46.775391 C 38.71434 45.319366 47 36.126845 47 25 C 47 12.861562 37.138438 3 25 3 z M 25 5 C 36.057562 5 45 13.942438 45 25 C 45 34.729791 38.035799 42.731796 28.84375 44.533203 L 28.84375 31.564453 L 34.136719 31.564453 L 35.298828 24.044922 L 28.84375 24.044922 L 28.84375 22.027344 C 28.84375 20.989871 29.033574 20.060293 29.353516 19.501953 C 29.673457 18.943614 29.981865 18.701172 30.738281 18.701172 L 35.185547 18.701172 L 35.185547 12.009766 L 34.318359 11.892578 C 33.718567 11.811418 32.349197 11.621094 29.878906 11.621094 C 27.175808 11.621094 24.855567 12.357448 23.253906 14.023438 C 21.652246 15.689426 20.861328 18.170128 20.861328 21.373047 L 20.861328 24.046875 L 15.664062 24.046875 L 15.664062 31.566406 L 20.861328 31.566406 L 20.861328 44.470703 C 11.816995 42.554813 5 34.624447 5 25 C 5 13.942438 13.942438 5 25 5 z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="
+                  p-2
+                  ml-1
+                  bg-blue-400
+                  rounded-full
+                  inline-block
+                  text-gray-800
+                "
+              >
+                <svg
+                  title="tiktok"
+                  class="fill-current h-8 w-8"
+                  viewBox="0 0 50 50"
+                >
+                  <path
+                    d="M 9 4 C 6.2495759 4 4 6.2495759 4 9 L 4 41 C 4 43.750424 6.2495759 46 9 46 L 41 46 C 43.750424 46 46 43.750424 46 41 L 46 9 C 46 6.2495759 43.750424 4 41 4 L 9 4 z M 9 6 L 41 6 C 42.671576 6 44 7.3284241 44 9 L 44 41 C 44 42.671576 42.671576 44 41 44 L 9 44 C 7.3284241 44 6 42.671576 6 41 L 6 9 C 6 7.3284241 7.3284241 6 9 6 z M 26.042969 10 A 1.0001 1.0001 0 0 0 25.042969 10.998047 C 25.042969 10.998047 25.031984 15.873262 25.021484 20.759766 C 25.016184 23.203017 25.009799 25.64879 25.005859 27.490234 C 25.001922 29.331679 25 30.496833 25 30.59375 C 25 32.409009 23.351421 33.892578 21.472656 33.892578 C 19.608867 33.892578 18.121094 32.402853 18.121094 30.539062 C 18.121094 28.675273 19.608867 27.1875 21.472656 27.1875 C 21.535796 27.1875 21.663054 27.208245 21.880859 27.234375 A 1.0001 1.0001 0 0 0 23 26.240234 L 23 22.039062 A 1.0001 1.0001 0 0 0 22.0625 21.041016 C 21.906673 21.031216 21.710581 21.011719 21.472656 21.011719 C 16.223131 21.011719 11.945313 25.289537 11.945312 30.539062 C 11.945312 35.788589 16.223131 40.066406 21.472656 40.066406 C 26.72204 40.066409 31 35.788588 31 30.539062 L 31 21.490234 C 32.454611 22.653646 34.267517 23.390625 36.269531 23.390625 C 36.542588 23.390625 36.802305 23.374442 37.050781 23.351562 A 1.0001 1.0001 0 0 0 37.958984 22.355469 L 37.958984 17.685547 A 1.0001 1.0001 0 0 0 37.03125 16.6875 C 33.886609 16.461891 31.379838 14.012216 31.052734 10.896484 A 1.0001 1.0001 0 0 0 30.058594 10 L 26.042969 10 z M 27.041016 12 L 29.322266 12 C 30.049047 15.2987 32.626734 17.814404 35.958984 18.445312 L 35.958984 21.310547 C 33.820114 21.201935 31.941489 20.134948 30.835938 18.453125 A 1.0001 1.0001 0 0 0 29 19.003906 L 29 30.539062 C 29 34.707538 25.641273 38.066406 21.472656 38.066406 C 17.304181 38.066406 13.945312 34.707538 13.945312 30.539062 C 13.945312 26.538539 17.066083 23.363182 21 23.107422 L 21 25.283203 C 18.286416 25.535721 16.121094 27.762246 16.121094 30.539062 C 16.121094 33.483274 18.528445 35.892578 21.472656 35.892578 C 24.401892 35.892578 27 33.586491 27 30.59375 C 27 30.64267 27.001859 29.335571 27.005859 27.494141 C 27.009759 25.65271 27.016224 23.20692 27.021484 20.763672 C 27.030884 16.376775 27.039186 12.849206 27.041016 12 z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="
+                  p-2
+                  ml-1
+                  bg-blue-400
+                  rounded-full
+                  inline-block
+                  text-gray-800
+                "
+              >
+                <svg
+                  title="instagram"
+                  class="fill-current h-8 w-8"
+                  viewBox="0 0 50 50"
+                >
+                  <path
+                    d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <h3
+              class="
+                text-xl text-gray-800
+                font-bold
+                pb-2
+                border-yellow-700 border-b border-dashed
+                mb-2
+                inline-block
+              "
+            >
+              Ou deixe sua menssagem
+            </h3>
+            <div class="w-full text-gray-900">
+              <div class="bg-white p-2 rounded-sm mt-2">
+                <input
+                  title="name"
+                  id="name"
+                  class="text-blue-700 outline-none bg-none text-base w-full"
+                  type="text"
+                  placeholder="Fulano de tal"
+                />
+              </div>
+              <div class="bg-white p-2 rounded-sm mt-2">
+                <input
+                  title="email"
+                  id="email"
+                  class="text-blue-700 outline-none bg-none text-base w-full"
+                  type="email"
+                  placeholder="fulano@detal.com.br"
+                />
+              </div>
+              <div class="bg-white p-2 rounded-sm mt-2">
+                <input
+                  title="tel"
+                  id="tel"
+                  class="text-blue-700 outline-none bg-none text-base w-full"
+                  type="tel"
+                  placeholder="(31) 9 9999-9999"
+                />
+              </div>
+              <div class="bg-white p-2 rounded-sm mt-2">
+                <textarea
+                  id="message"
+                  title="message"
+                  class="mt-1 p-1 outline-none text-base w-full"
+                  placeholder="Insira sua menssagem aqui..."
+                ></textarea>
+              </div>
+              <button
+                class="
+                  bg-green-500
+                  w-full
+                  rounded-sm
+                  mt-2
+                  p-2
+                  text-lg text-gray-800
+                  transition-colors
+                  hover:bg-green-600 hover:text-gray-900
+                "
+              >
+                Enviar
+              </button>
+            </div>
+          </div>
+          <div
+            class="
+              md:w-1/2
+              w-full
+              m-auto
+              max-h-80
+              flex
+              justify-center
+              content-center
+            "
+          >
+            <img
+              class="w-full"
+              src="./img/MobileMarketing-bro.svg"
+              alt="Pessoa trabalhando"
+            />
+          </div>
+        </div>
+      </section>
+      <section data-scroll class="w-full pt-6 bg-blue-300">
+        <div
+          class="max-w-7xl w-full p-6 m-auto flex flex-col-reverse md:flex-row"
+        >
+          <div
+            class="
+              md:w-1/2
+              w-full
+              m-auto
+              max-h-80
+              flex
+              justify-center
+              content-center
+            "
+          >
+            <img
+              class="w-full"
+              src="./img/Address-cuate.svg"
+              alt="Pessoa trabalhando"
+            />
+          </div>
+          <div class="md:w-1/2 m-auto">
+            <h2
+              class="
+                text-2xl text-gray-800
+                font-bold
+                pb-2
+                border-blue-700 border-b border-dashed
+                mb-2
+                inline-block
+              "
+            >
+              Onde estamos localizados
+            </h2>
+            <div class="flex items-center mt-2">
+              <span class="text-gray-900 text-lg mr-1.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </span>
+              <p class="text-gray-900 text-lg">feriasbr@feriasbr.com.br</p>
+            </div>
+            <div class="flex items-center mt-2">
+              <span class="text-gray-900 text-lg mr-1.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+              </span>
+              <p class="text-gray-900 text-lg">(71) 9999-9999</p>
+            </div>
+            <div class="flex items-center mt-2">
+              <span class="text-gray-900 text-lg mr-1.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </span>
+              <p class="text-gray-900 text-lg">
+                Av. Euclydes da Cunha, 49 - Graça, Salvador - BA, 40150-122
+              </p>
+            </div>
 
-<body class="min-h-screen">
-	<header class="h-20 top-0 z-20 w-full fixed bg-blue-300">
-		<nav class="bg-blue-300 flex items-center max-w-7xl m-auto justify-between flex-wrap p-6">
-			<div class="flex items-center flex-shrink-0 text-blue-700 mr-6">
-				<svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54"
-					xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
-				</svg>
-				<span class="font-semibold text-xl tracking-tight">Férias BR</span>
-			</div>
-			<div class="block lg:hidden">
-				<button id="hamburguer"
-					class="flex items-center px-3 py-2 text-blue-700 border-none transition-colors hover:text-blue-500">
-					<svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-						<title>Menu</title>
-						<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-					</svg>
-				</button>
-			</div>
-			<div id="menu"
-				class=" animate-fade-in-down w-full hidden flex-grow lg:animate-none lg:flex lg:items-center lg:w-auto">
-				<div class="text-sm lg:flex-grow">
-					<a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 text-blue-700 hover:text-white mr-4">
-						Início
-					</a>
-					<a href="packages.html" class="block mt-4 lg:inline-block lg:mt-0 text-blue-700 hover:text-white mr-4">
-						Pacotes
-					</a>
-					<a href="search.html" class="block mt-4 lg:inline-block lg:mt-0 text-blue-700 hover:text-white">
-						Buscar destinos
-					</a>
-				</div>
-				<div>
-					<a id="link-contato" href="index.html#contato"
-						class="inline-block text-sm px-4 py-2 leading-none bg-blue-700 rounded text-blue-200  transition-opacity hover:opacity-90 mt-4 lg:mt-0">
-						Contato
-					</a>
-				</div>
-			</div>
-		</nav>
-	</header>
+            <p class="text-gray-900 text-lg">
+              Atendimento de segunda à sexta, das 08H às 17H
+            </p>
+          </div>
+        </div>
+        <iframe
+          title="Empresa Férias br - Av. Euclydes da Cunha, 49 - Graça, Salvador - BA, 40150-122"
+          class="w-full h-96"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5845052288446!2d-38.52320008557347!3d-12.998405863869166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71604823af0b7ad%3A0xe34ad2e59955d867!2sAv.%20Euclydes%20da%20Cunha%2C%2049%20-%20Gra%C3%A7a%2C%20Salvador%20-%20BA%2C%2040150-122!5e0!3m2!1spt-PT!2sbr!4v1638298551300!5m2!1spt-PT!2sbr"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </section>
+    </main>
 
-	<main class="bg-gray-50 mt-20">
-		<section data-scroll class="w-full pt-6 pb-6 bg-yellow-500">
-			<div class="max-w-7xl w-full p-6 m-auto flex flex-col md:flex-row">
-				<div class=" md:w-1/2 m-auto">
-					<h2 class="text-2xl text-blue-100 font-bold pb-2 border-yellow-700 border-b border-dashed mb-2 inline-block">
-						Sobre nós</h2>
-					<p class="text-blue-50 text-lg">A Férias BR é uma empresa que esta no mercado com mais de 15 anos de
-						experiencia, que
-						tem como foco o turismo
-						brasileiro, oferecendo aos nossos clientes as melhores experiencias que o país pode oferecer.
-						<br />
-						Com isso demonstrar e compartilhar as coisas belas que nosso país possuí, além de compartilhar nossa
-						história e cultura.
-					</p>
-				</div>
-				<div class="md:w-1/2 w-full mt-3  max-h-80 flex justify-center content-center">
-					<img class="w-full" src="./img/Company-amico.svg" alt="Pessoa trabalhando">
-				</div>
-			</div>
-		</section>
-		<section data-scroll class="w-full pt-6 pb-6 bg-blue-300">
-			<div class="max-w-7xl w-full p-6 m-auto flex flex-col-reverse md:flex-row">
-				<div class="md:w-1/2 w-full m-auto  max-h-80 flex justify-center content-center">
-					<img class="w-full" src="./img/Traveling-amico.svg" alt="Pessoa trabalhando">
-				</div>
-				<div class=" md:w-1/2 m-auto">
-					<h2 class="text-2xl text-blue-100 font-bold pb-2 border-blue-700 border-b border-dashed mb-2 inline-block">
-						Nossos serviços
-					</h2>
-					<p class="text-blue-50 text-lg">
-						O ferecemos aos nossos clientes os melhores planos de viagens, com as melhores ofertas, buscando os melhores
-						lugares para hospedagem com os melhores restaurantes da região.
-						<br />
-						Tudo isso para facilitar e oferecer a melhor
-						experiencia durante sua viagem.
-					</p>
-					<a href="packages.html"
-						class="mt-2 p-4 uppercase h-full text-blue-500 bg-yellow-400 inline-block hover:bg-yellow-500 hover:text-blue-600 transition-colors ">Conferir
-						pacotes</a>
-				</div>
-			</div>
-		</section>
-		<section id="contato" data-scroll class="w-full pt-6 pb-6 bg-yellow-500">
-			<div class="max-w-7xl w-full p-6 m-auto flex flex-col md:flex-row">
-				<div class=" md:w-1/2 m-auto">
-					<h2 class="text-2xl text-blue-100 font-bold pb-2 border-yellow-700 border-b border-dashed mb-2 inline-block">
-						Siga nossas redes sociais
-					</h2>
-					<p class="text-blue-50 text-lg">Siga nossas redes sociais e acompanhe nossas promoções</p>
-					<div>
-						<a href="#" class="p-2 bg-blue-400  rounded-full inline-block text-blue-100">
-							<svg class="fill-current h-8 w-8" viewBox="0 0 50 50">
-								<path
-									d="M 25 3 C 12.861562 3 3 12.861562 3 25 C 3 36.019135 11.127533 45.138355 21.712891 46.728516 L 22.861328 46.902344 L 22.861328 29.566406 L 17.664062 29.566406 L 17.664062 26.046875 L 22.861328 26.046875 L 22.861328 21.373047 C 22.861328 18.494965 23.551973 16.599417 24.695312 15.410156 C 25.838652 14.220896 27.528004 13.621094 29.878906 13.621094 C 31.758714 13.621094 32.490022 13.734993 33.185547 13.820312 L 33.185547 16.701172 L 30.738281 16.701172 C 29.349697 16.701172 28.210449 17.475903 27.619141 18.507812 C 27.027832 19.539724 26.84375 20.771816 26.84375 22.027344 L 26.84375 26.044922 L 32.966797 26.044922 L 32.421875 29.564453 L 26.84375 29.564453 L 26.84375 46.929688 L 27.978516 46.775391 C 38.71434 45.319366 47 36.126845 47 25 C 47 12.861562 37.138438 3 25 3 z M 25 5 C 36.057562 5 45 13.942438 45 25 C 45 34.729791 38.035799 42.731796 28.84375 44.533203 L 28.84375 31.564453 L 34.136719 31.564453 L 35.298828 24.044922 L 28.84375 24.044922 L 28.84375 22.027344 C 28.84375 20.989871 29.033574 20.060293 29.353516 19.501953 C 29.673457 18.943614 29.981865 18.701172 30.738281 18.701172 L 35.185547 18.701172 L 35.185547 12.009766 L 34.318359 11.892578 C 33.718567 11.811418 32.349197 11.621094 29.878906 11.621094 C 27.175808 11.621094 24.855567 12.357448 23.253906 14.023438 C 21.652246 15.689426 20.861328 18.170128 20.861328 21.373047 L 20.861328 24.046875 L 15.664062 24.046875 L 15.664062 31.566406 L 20.861328 31.566406 L 20.861328 44.470703 C 11.816995 42.554813 5 34.624447 5 25 C 5 13.942438 13.942438 5 25 5 z" />
-							</svg>
-						</a>
-						<a href="#" class="p-2 ml-1 bg-blue-400  rounded-full inline-block text-blue-100">
-							<svg class="fill-current h-8 w-8" viewBox="0 0 50 50">
-								<path
-									d="M 9 4 C 6.2495759 4 4 6.2495759 4 9 L 4 41 C 4 43.750424 6.2495759 46 9 46 L 41 46 C 43.750424 46 46 43.750424 46 41 L 46 9 C 46 6.2495759 43.750424 4 41 4 L 9 4 z M 9 6 L 41 6 C 42.671576 6 44 7.3284241 44 9 L 44 41 C 44 42.671576 42.671576 44 41 44 L 9 44 C 7.3284241 44 6 42.671576 6 41 L 6 9 C 6 7.3284241 7.3284241 6 9 6 z M 26.042969 10 A 1.0001 1.0001 0 0 0 25.042969 10.998047 C 25.042969 10.998047 25.031984 15.873262 25.021484 20.759766 C 25.016184 23.203017 25.009799 25.64879 25.005859 27.490234 C 25.001922 29.331679 25 30.496833 25 30.59375 C 25 32.409009 23.351421 33.892578 21.472656 33.892578 C 19.608867 33.892578 18.121094 32.402853 18.121094 30.539062 C 18.121094 28.675273 19.608867 27.1875 21.472656 27.1875 C 21.535796 27.1875 21.663054 27.208245 21.880859 27.234375 A 1.0001 1.0001 0 0 0 23 26.240234 L 23 22.039062 A 1.0001 1.0001 0 0 0 22.0625 21.041016 C 21.906673 21.031216 21.710581 21.011719 21.472656 21.011719 C 16.223131 21.011719 11.945313 25.289537 11.945312 30.539062 C 11.945312 35.788589 16.223131 40.066406 21.472656 40.066406 C 26.72204 40.066409 31 35.788588 31 30.539062 L 31 21.490234 C 32.454611 22.653646 34.267517 23.390625 36.269531 23.390625 C 36.542588 23.390625 36.802305 23.374442 37.050781 23.351562 A 1.0001 1.0001 0 0 0 37.958984 22.355469 L 37.958984 17.685547 A 1.0001 1.0001 0 0 0 37.03125 16.6875 C 33.886609 16.461891 31.379838 14.012216 31.052734 10.896484 A 1.0001 1.0001 0 0 0 30.058594 10 L 26.042969 10 z M 27.041016 12 L 29.322266 12 C 30.049047 15.2987 32.626734 17.814404 35.958984 18.445312 L 35.958984 21.310547 C 33.820114 21.201935 31.941489 20.134948 30.835938 18.453125 A 1.0001 1.0001 0 0 0 29 19.003906 L 29 30.539062 C 29 34.707538 25.641273 38.066406 21.472656 38.066406 C 17.304181 38.066406 13.945312 34.707538 13.945312 30.539062 C 13.945312 26.538539 17.066083 23.363182 21 23.107422 L 21 25.283203 C 18.286416 25.535721 16.121094 27.762246 16.121094 30.539062 C 16.121094 33.483274 18.528445 35.892578 21.472656 35.892578 C 24.401892 35.892578 27 33.586491 27 30.59375 C 27 30.64267 27.001859 29.335571 27.005859 27.494141 C 27.009759 25.65271 27.016224 23.20692 27.021484 20.763672 C 27.030884 16.376775 27.039186 12.849206 27.041016 12 z" />
-							</svg>
-						</a>
-						<a href="#" class="p-2 ml-1 bg-blue-400  rounded-full inline-block text-blue-100">
-							<svg class="fill-current h-8 w-8" viewBox="0 0 50 50">
-								<path
-									d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z" />
-							</svg>
-						</a>
-					</div>
-					<h3 class="text-xl text-blue-100 font-bold pb-2 border-yellow-700 border-b border-dashed mb-2 inline-block">
-						Ou deixe sua menssagem
-					</h3>
-					<div class="w-full text-blue-50">
-						<div class="bg-white p-2 rounded-sm mt-2">
-							<input title="name" id="name" class="text-blue-700 outline-none bg-none text-base w-full" type="text"
-								placeholder="Fulano de tal">
-						</div>
-						<div class="bg-white p-2 rounded-sm mt-2">
-							<input title="email" id="email" class="text-blue-700 outline-none bg-none text-base w-full" type="email"
-								placeholder="fulano@detal.com.br">
-						</div>
-						<div class="bg-white p-2 rounded-sm mt-2">
-							<input title="tel" id="tel" class="text-blue-700 outline-none bg-none text-base w-full" type="tel"
-								placeholder="(31) 9 9999-9999">
-						</div>
-						<div class="bg-white p-2 rounded-sm mt-2">
-							<textarea id="message" title="message" class="mt-1 p-1 outline-none text-base w-full"
-								placeholder="Insira sua menssagem aqui..."></textarea>
-						</div>
-						<button
-							class="bg-green-500 w-full rounded-sm mt-2 p-2 text-lg text-blue-100 transition-colors hover:bg-green-600 hover:text-blue-50">
-							Enviar
-						</button>
-					</div>
-				</div>
-				<div class="md:w-1/2 w-full m-auto  max-h-80 flex justify-center content-center">
-					<img class="w-full" src="./img/MobileMarketing-bro.svg" alt="Pessoa trabalhando">
-				</div>
-			</div>
-		</section>
-		<section data-scroll class="w-full pt-6 bg-blue-300">
-			<div class="max-w-7xl w-full p-6 m-auto flex flex-col-reverse md:flex-row">
-				<div class="md:w-1/2 w-full m-auto  max-h-80 flex justify-center content-center">
-					<img class="w-full" src="./img/Address-cuate.svg" alt="Pessoa trabalhando">
-				</div>
-				<div class=" md:w-1/2 m-auto">
-					<h2 class="text-2xl text-blue-100 font-bold pb-2 border-blue-700 border-b border-dashed mb-2 inline-block">
-						Onde estamos localizados
-					</h2>
-					<div class="flex items-center mt-2">
-						<span class="text-blue-50 text-lg mr-1.5">
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-								stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-									d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-							</svg>
-						</span>
-						<p class="text-blue-50 text-lg">
-							feriasbr@feriasbr.com.br
-						</p>
-					</div>
-					<div class="flex items-center mt-2">
-						<span class="text-blue-50 text-lg mr-1.5">
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-								stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-									d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-							</svg>
-						</span>
-						<p class="text-blue-50 text-lg">
-							(71) 9999-9999
-						</p>
-					</div>
-					<div class="flex items-center mt-2">
-						<span class="text-blue-50 text-lg mr-1.5">
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-								stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-									d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-									d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-							</svg>
-						</span>
-						<p class="text-blue-50 text-lg">
-							Av. Euclydes da Cunha, 49 - Graça, Salvador - BA, 40150-122
-						</p>
-					</div>
+    <footer data-scroll class="bg-gray-200 text-blue-700">
+      <main
+        class="max-w-7xl w-full p-6 flex m-auto md:flex-row flex-col-reverse"
+      >
+        <section class="w-full flex xl:flex-row flex-col-reverse">
+          <div>
+            <div>
+              <span class="font-semibold block mb-2">Siga nossas redes</span>
+              <div>
+                <a
+                  title="facebook"
+                  href="#"
+                  class="
+                    p-2
+                    bg-gray-400
+                    rounded-full
+                    inline-block
+                    text-gray-800
+                  "
+                >
+                  <svg class="fill-current h-8 w-8" viewBox="0 0 50 50">
+                    <path
+                      d="M 25 3 C 12.861562 3 3 12.861562 3 25 C 3 36.019135 11.127533 45.138355 21.712891 46.728516 L 22.861328 46.902344 L 22.861328 29.566406 L 17.664062 29.566406 L 17.664062 26.046875 L 22.861328 26.046875 L 22.861328 21.373047 C 22.861328 18.494965 23.551973 16.599417 24.695312 15.410156 C 25.838652 14.220896 27.528004 13.621094 29.878906 13.621094 C 31.758714 13.621094 32.490022 13.734993 33.185547 13.820312 L 33.185547 16.701172 L 30.738281 16.701172 C 29.349697 16.701172 28.210449 17.475903 27.619141 18.507812 C 27.027832 19.539724 26.84375 20.771816 26.84375 22.027344 L 26.84375 26.044922 L 32.966797 26.044922 L 32.421875 29.564453 L 26.84375 29.564453 L 26.84375 46.929688 L 27.978516 46.775391 C 38.71434 45.319366 47 36.126845 47 25 C 47 12.861562 37.138438 3 25 3 z M 25 5 C 36.057562 5 45 13.942438 45 25 C 45 34.729791 38.035799 42.731796 28.84375 44.533203 L 28.84375 31.564453 L 34.136719 31.564453 L 35.298828 24.044922 L 28.84375 24.044922 L 28.84375 22.027344 C 28.84375 20.989871 29.033574 20.060293 29.353516 19.501953 C 29.673457 18.943614 29.981865 18.701172 30.738281 18.701172 L 35.185547 18.701172 L 35.185547 12.009766 L 34.318359 11.892578 C 33.718567 11.811418 32.349197 11.621094 29.878906 11.621094 C 27.175808 11.621094 24.855567 12.357448 23.253906 14.023438 C 21.652246 15.689426 20.861328 18.170128 20.861328 21.373047 L 20.861328 24.046875 L 15.664062 24.046875 L 15.664062 31.566406 L 20.861328 31.566406 L 20.861328 44.470703 C 11.816995 42.554813 5 34.624447 5 25 C 5 13.942438 13.942438 5 25 5 z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  title="tiktok"
+                  href="#"
+                  class="
+                    p-2
+                    ml-1
+                    bg-gray-400
+                    rounded-full
+                    inline-block
+                    text-gray-800
+                  "
+                >
+                  <svg class="fill-current h-8 w-8" viewBox="0 0 50 50">
+                    <path
+                      d="M 9 4 C 6.2495759 4 4 6.2495759 4 9 L 4 41 C 4 43.750424 6.2495759 46 9 46 L 41 46 C 43.750424 46 46 43.750424 46 41 L 46 9 C 46 6.2495759 43.750424 4 41 4 L 9 4 z M 9 6 L 41 6 C 42.671576 6 44 7.3284241 44 9 L 44 41 C 44 42.671576 42.671576 44 41 44 L 9 44 C 7.3284241 44 6 42.671576 6 41 L 6 9 C 6 7.3284241 7.3284241 6 9 6 z M 26.042969 10 A 1.0001 1.0001 0 0 0 25.042969 10.998047 C 25.042969 10.998047 25.031984 15.873262 25.021484 20.759766 C 25.016184 23.203017 25.009799 25.64879 25.005859 27.490234 C 25.001922 29.331679 25 30.496833 25 30.59375 C 25 32.409009 23.351421 33.892578 21.472656 33.892578 C 19.608867 33.892578 18.121094 32.402853 18.121094 30.539062 C 18.121094 28.675273 19.608867 27.1875 21.472656 27.1875 C 21.535796 27.1875 21.663054 27.208245 21.880859 27.234375 A 1.0001 1.0001 0 0 0 23 26.240234 L 23 22.039062 A 1.0001 1.0001 0 0 0 22.0625 21.041016 C 21.906673 21.031216 21.710581 21.011719 21.472656 21.011719 C 16.223131 21.011719 11.945313 25.289537 11.945312 30.539062 C 11.945312 35.788589 16.223131 40.066406 21.472656 40.066406 C 26.72204 40.066409 31 35.788588 31 30.539062 L 31 21.490234 C 32.454611 22.653646 34.267517 23.390625 36.269531 23.390625 C 36.542588 23.390625 36.802305 23.374442 37.050781 23.351562 A 1.0001 1.0001 0 0 0 37.958984 22.355469 L 37.958984 17.685547 A 1.0001 1.0001 0 0 0 37.03125 16.6875 C 33.886609 16.461891 31.379838 14.012216 31.052734 10.896484 A 1.0001 1.0001 0 0 0 30.058594 10 L 26.042969 10 z M 27.041016 12 L 29.322266 12 C 30.049047 15.2987 32.626734 17.814404 35.958984 18.445312 L 35.958984 21.310547 C 33.820114 21.201935 31.941489 20.134948 30.835938 18.453125 A 1.0001 1.0001 0 0 0 29 19.003906 L 29 30.539062 C 29 34.707538 25.641273 38.066406 21.472656 38.066406 C 17.304181 38.066406 13.945312 34.707538 13.945312 30.539062 C 13.945312 26.538539 17.066083 23.363182 21 23.107422 L 21 25.283203 C 18.286416 25.535721 16.121094 27.762246 16.121094 30.539062 C 16.121094 33.483274 18.528445 35.892578 21.472656 35.892578 C 24.401892 35.892578 27 33.586491 27 30.59375 C 27 30.64267 27.001859 29.335571 27.005859 27.494141 C 27.009759 25.65271 27.016224 23.20692 27.021484 20.763672 C 27.030884 16.376775 27.039186 12.849206 27.041016 12 z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  title="instagram"
+                  href="#"
+                  class="
+                    p-2
+                    ml-1
+                    bg-gray-400
+                    rounded-full
+                    inline-block
+                    text-gray-800
+                  "
+                >
+                  <svg class="fill-current h-8 w-8" viewBox="0 0 50 50">
+                    <path
+                      d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div>
+              <span class="font-semibold block mb-2 mt-2"
+                >Formas de pagamento</span
+              >
+              <div class="flex">
+                <img
+                  title="elo"
+                  class="p-2 pl-0 w-16"
+                  src="./img/elo.svg"
+                  alt="elo"
+                />
+                <img
+                  title="mastercard mr-2"
+                  class="p-2 pl"
+                  src="./img/mastercard.svg"
+                  alt="masterca"
+                />
 
-					<p class="text-blue-50 text-lg">Atendimento de segunda à sexta, das 08H às 17H</p>
-
-				</div>
-			</div>
-			<div id="map" class="w-auto h-96"></div>
-		</section>
-	</main>
-
-	<footer data-scroll class=" bg-gray-200 text-blue-700">
-		<main class="max-w-7xl w-full p-6 flex m-auto md:flex-row  flex-col-reverse ">
-			<section class="w-full flex xl:flex-row flex-col-reverse">
-				<div>
-					<div>
-						<span class="font-semibold block mb-2">Siga nossas redes</span>
-						<div>
-							<a href="#" class="p-2 bg-gray-400  rounded-full inline-block text-blue-100">
-								<svg class="fill-current h-8 w-8" viewBox="0 0 50 50">
-									<path
-										d="M 25 3 C 12.861562 3 3 12.861562 3 25 C 3 36.019135 11.127533 45.138355 21.712891 46.728516 L 22.861328 46.902344 L 22.861328 29.566406 L 17.664062 29.566406 L 17.664062 26.046875 L 22.861328 26.046875 L 22.861328 21.373047 C 22.861328 18.494965 23.551973 16.599417 24.695312 15.410156 C 25.838652 14.220896 27.528004 13.621094 29.878906 13.621094 C 31.758714 13.621094 32.490022 13.734993 33.185547 13.820312 L 33.185547 16.701172 L 30.738281 16.701172 C 29.349697 16.701172 28.210449 17.475903 27.619141 18.507812 C 27.027832 19.539724 26.84375 20.771816 26.84375 22.027344 L 26.84375 26.044922 L 32.966797 26.044922 L 32.421875 29.564453 L 26.84375 29.564453 L 26.84375 46.929688 L 27.978516 46.775391 C 38.71434 45.319366 47 36.126845 47 25 C 47 12.861562 37.138438 3 25 3 z M 25 5 C 36.057562 5 45 13.942438 45 25 C 45 34.729791 38.035799 42.731796 28.84375 44.533203 L 28.84375 31.564453 L 34.136719 31.564453 L 35.298828 24.044922 L 28.84375 24.044922 L 28.84375 22.027344 C 28.84375 20.989871 29.033574 20.060293 29.353516 19.501953 C 29.673457 18.943614 29.981865 18.701172 30.738281 18.701172 L 35.185547 18.701172 L 35.185547 12.009766 L 34.318359 11.892578 C 33.718567 11.811418 32.349197 11.621094 29.878906 11.621094 C 27.175808 11.621094 24.855567 12.357448 23.253906 14.023438 C 21.652246 15.689426 20.861328 18.170128 20.861328 21.373047 L 20.861328 24.046875 L 15.664062 24.046875 L 15.664062 31.566406 L 20.861328 31.566406 L 20.861328 44.470703 C 11.816995 42.554813 5 34.624447 5 25 C 5 13.942438 13.942438 5 25 5 z" />
-								</svg>
-							</a>
-							<a href="#" class="p-2 ml-1 bg-gray-400  rounded-full inline-block text-blue-100">
-								<svg class="fill-current h-8 w-8" viewBox="0 0 50 50">
-									<path
-										d="M 9 4 C 6.2495759 4 4 6.2495759 4 9 L 4 41 C 4 43.750424 6.2495759 46 9 46 L 41 46 C 43.750424 46 46 43.750424 46 41 L 46 9 C 46 6.2495759 43.750424 4 41 4 L 9 4 z M 9 6 L 41 6 C 42.671576 6 44 7.3284241 44 9 L 44 41 C 44 42.671576 42.671576 44 41 44 L 9 44 C 7.3284241 44 6 42.671576 6 41 L 6 9 C 6 7.3284241 7.3284241 6 9 6 z M 26.042969 10 A 1.0001 1.0001 0 0 0 25.042969 10.998047 C 25.042969 10.998047 25.031984 15.873262 25.021484 20.759766 C 25.016184 23.203017 25.009799 25.64879 25.005859 27.490234 C 25.001922 29.331679 25 30.496833 25 30.59375 C 25 32.409009 23.351421 33.892578 21.472656 33.892578 C 19.608867 33.892578 18.121094 32.402853 18.121094 30.539062 C 18.121094 28.675273 19.608867 27.1875 21.472656 27.1875 C 21.535796 27.1875 21.663054 27.208245 21.880859 27.234375 A 1.0001 1.0001 0 0 0 23 26.240234 L 23 22.039062 A 1.0001 1.0001 0 0 0 22.0625 21.041016 C 21.906673 21.031216 21.710581 21.011719 21.472656 21.011719 C 16.223131 21.011719 11.945313 25.289537 11.945312 30.539062 C 11.945312 35.788589 16.223131 40.066406 21.472656 40.066406 C 26.72204 40.066409 31 35.788588 31 30.539062 L 31 21.490234 C 32.454611 22.653646 34.267517 23.390625 36.269531 23.390625 C 36.542588 23.390625 36.802305 23.374442 37.050781 23.351562 A 1.0001 1.0001 0 0 0 37.958984 22.355469 L 37.958984 17.685547 A 1.0001 1.0001 0 0 0 37.03125 16.6875 C 33.886609 16.461891 31.379838 14.012216 31.052734 10.896484 A 1.0001 1.0001 0 0 0 30.058594 10 L 26.042969 10 z M 27.041016 12 L 29.322266 12 C 30.049047 15.2987 32.626734 17.814404 35.958984 18.445312 L 35.958984 21.310547 C 33.820114 21.201935 31.941489 20.134948 30.835938 18.453125 A 1.0001 1.0001 0 0 0 29 19.003906 L 29 30.539062 C 29 34.707538 25.641273 38.066406 21.472656 38.066406 C 17.304181 38.066406 13.945312 34.707538 13.945312 30.539062 C 13.945312 26.538539 17.066083 23.363182 21 23.107422 L 21 25.283203 C 18.286416 25.535721 16.121094 27.762246 16.121094 30.539062 C 16.121094 33.483274 18.528445 35.892578 21.472656 35.892578 C 24.401892 35.892578 27 33.586491 27 30.59375 C 27 30.64267 27.001859 29.335571 27.005859 27.494141 C 27.009759 25.65271 27.016224 23.20692 27.021484 20.763672 C 27.030884 16.376775 27.039186 12.849206 27.041016 12 z" />
-								</svg>
-							</a>
-							<a href="#" class="p-2 ml-1 bg-gray-400  rounded-full inline-block text-blue-100">
-								<svg class="fill-current h-8 w-8" viewBox="0 0 50 50">
-									<path
-										d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z" />
-								</svg>
-							</a>
-						</div>
-					</div>
-					<div>
-						<span class="font-semibold block mb-2 mt-2">Formas de pagamento</span>
-						<div class="flex">
-							<img title="elo" class="p-2 pl-0 w-16" src="./img/elo.svg" alt="elo">
-							<img title="mastercard" class="p-2 pl-0 w-12" src="./img/mastercard.svg" alt="mastercard">
-							<img title="visa" class="p-2 pl-0 w-16" src="./img/visa.svg" alt="visa">
-						</div>
-					</div>
-				</div>
-				<div class="xl:ml-5 mb-2">
-					<span class="font-semibold block mb-2">Entre em contato</span>
-					<p class="max-w-xs">
-						Fale com a gente! Quer saber mais sobre os hotéis, sobre a Férias BR? Mande um email que nos respondemos!
-					</p>
-					<span>email: <a class="text-blue-600" href="#">feriasbr@feriasbr.com.br</a> </span>
-				</div>
-			</section>
-			<aside class=" w-full  flex flex-col md:mb-0 mb-2 items-start ">
-				<span class="font-bold text-base">Receba nossas Novidades</span>
-				<div class="max-w-md w-full">
-					<div class="bg-white p-2 rounded-md mt-2">
-						<input title="email" class="outline-none text-base w-full" type="text" placeholder="Insira seu email aqui">
-					</div>
-					<button
-						class="bg-green-500 w-full rounded-md mt-2 p-2 text-lg text-blue-100 transition-colors hover:bg-green-600 hover:text-blue-50">
-						Cadastrar
-					</button>
-				</div>
-			</aside>
-		</main>
-		<div class="w-full text-center pb-2">
-			© 2021 - Desenvolvido por <a class="text-indigo-600 transition-colors hover:text-indigo-500" target="_blank"
-				href="https://devventura.netlify.app/">DevVentura</a>
-		</div>
-	</footer>
-	<script src="./src/menu.js"></script>
-	<script src="./src/scripts/animated.js"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRKXa_5DwtA2aWn1liKapNoVBK2SCJBmo&callback=initMap&libraries=places&v=weekly"
-		async></script>
-</body>
-
+                <img
+                  title="visa"
+                  class="p-2 pl-0 w-16"
+                  src="./img/visa.svg"
+                  alt="visa"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="xl:ml-5 mb-2">
+            <span class="font-semibold block mb-2">Entre em contato</span>
+            <p class="max-w-xs">
+              Fale com a gente! Quer saber mais sobre os hotéis, sobre a Férias
+              BR? Mande um email que nos respondemos!
+            </p>
+            <span
+              >email:
+              <a class="text-blue-900" href="#">feriasbr@feriasbr.com.br</a>
+            </span>
+          </div>
+        </section>
+        <aside class="w-full flex flex-col md:mb-0 mb-2 items-start">
+          <span class="font-bold text-base">Receba nossas Novidades</span>
+          <div class="max-w-md w-full">
+            <div class="bg-white p-2 rounded-md mt-2">
+              <input
+                title="email"
+                class="outline-none text-base w-full"
+                type="text"
+                placeholder="Insira seu email aqui"
+              />
+            </div>
+            <button
+              class="
+                bg-green-400
+                w-full
+                rounded-md
+                mt-2
+                p-2
+                text-lg text-gray-800
+                transition-colors
+                hover:bg-green-500 hover:text-gray-700
+              "
+            >
+              Cadastrar
+            </button>
+          </div>
+        </aside>
+      </main>
+      <div class="w-full text-center pb-2">
+        © 2021 - Desenvolvido por
+        <a
+          class="text-indigo-600 transition-colors hover:text-indigo-500"
+          target="_blank"
+          rel="noopener"
+          href="https://devventura.netlify.app/"
+          >DevVentura</a
+        >
+      </div>
+    </footer>
+    <script src="./src/menu.js"></script>
+    <script src="./src/scripts/animated.js"></script>
+  </body>
 </html>
