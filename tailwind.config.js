@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       maxHeight: {
-        '500': '500px',
-       },
+        500: "500px",
+      },
       keyframes: {
         "fade-in-down": {
           "0%": {
@@ -31,13 +31,13 @@ module.exports = {
         pink: colors.fuchsia,
       },
       backgroundImage: {
-        "rio-montanhas":
+        "rio-montanhas": 
           "url('/viagens/img/rio.webp')",
-        "casal-praia":
+        "casal-praia": 
           "url('/viagens/img/casal.webp')",
-        "cataratas":
+        "cataratas": 
           "url('/viagens/img/cataratas.jpg')",
-        "comida":
+        "comida": 
           "url('/viagens/img/comida.jpg')",
       },
     },
@@ -45,5 +45,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [  
+    require("@tailwindcss/line-clamp")
+  ]
 };
