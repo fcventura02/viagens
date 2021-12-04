@@ -9,29 +9,17 @@
       name="description"
       content="Encontre os melhores lugar para tirar suas féria e descansar com sua família."
     />
-
-    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="./src/map.js"></script>
-
     <link rel="stylesheet" href="./public/styles.css" />
     <link rel="stylesheet" href="./src/styles.css" />
+    <!--Efect-->
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   </head>
 
   <body>
-    <header class="h-20 top-0 z-20 w-full fixed bg-blue-400">
+    <header class="top-0 z-20 w-full fixed bg-blue-400">
       <nav
-        class="
-          bg-blue-400
-          flex
-          items-center
-          max-w-7xl
-          m-auto
-          justify-between
-          flex-wrap
-          p-6
-        "
+        class="flex items-center max-w-7xl m-auto justify-between flex-wrap p-6"
       >
         <div class="flex items-center flex-shrink-0 text-gray-800 mr-6">
           <svg
@@ -150,10 +138,76 @@
       </nav>
     </header>
     <main class="bg-gray-50 mt-20">
-      <div id="map" class="w-auto h-96 mt-auto"></div>
+      <section class="relative md:h-full max-h-500">
+        <div
+          class="
+            w-full
+            h-full
+            text-gray-50
+            absolute
+            backdrop-brightness-50 backdrop-filter
+          "
+        >
+          <div class="max-w-7xl h-full m-auto flex">
+            <div class="max-w-xl p-6 md:mt-8">
+              <img
+                class="md:h-28 mb-4"
+                src="./img/brasil.svg"
+                alt="Cristo redentor"
+              />
+              <h1 class="md:text-4xl text-2xl font-bold pb-1">
+                Confira nossos destinos e escolha agora mesmo sua próxima viagem
+              </h1>
+            </div>
+          </div>
+        </div>
+        <img
+          class="w-full object-cover md:h-full max-h-500"
+          src="./img/rio.webp"
+          alt="praias do rio de janeiro"
+        />
+      </section>
+      <section class="p-6 bg-yellow-300">
+        <div class="grid md:grid-cols-2 max-w-7xl m-auto">
+          <div class="h-full flex flex-col items-center">
+            <h2 class="text-gray-900 text-xl font-bold mb-4">
+              Selecione seu destino
+            </h2>
+            <select
+              class="
+                focus:border-blue-700
+                focus:ring-1
+                focus:ring-blue-700
+                focus:outline-none
+                w-60
+                bg-blue-300
+                text-base text-gray-800
+                border border-blue-300
+                rounded-sm
+                py-2
+                pl-1
+              "
+              name="destination"
+              id="destination"
+            >
+              <option value="Jalapao">Jalapão (TO)</option>
+              <option value="Salvador">Salvador (BA)</option>
+              <option value="Galinhos">Galinhos (RN)</option>
+              <option value="SerraDaCanastra">
+                Serra da Canastra (MG)
+              </option>
+              <option value="Bonito (MS)">Bonito (MS)</option>
+            </select>
+            <div id="container-destination" class="mt-4 bg-green-700 text-gray-50 shadow-2xl p-2 md:mr-4 rounded-sm" id="packages">
+              
+            </div>
+          </div>
+          <div id="map" class="w-auto h-96 md:mt-auto mt-3 rounded-sm shadow-2xl"></div>
+        </div>
+      </section>
     </main>
 
-    <footer data-scroll class="bg-gray-200 text-blue-700">
+    <footer class="bg-gray-200 text-blue-700">
       <main
         class="max-w-7xl w-full p-6 flex m-auto md:flex-row flex-col-reverse"
       >
@@ -295,11 +349,11 @@
         >
       </div>
     </footer>
-
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRKXa_5DwtA2aWn1liKapNoVBK2SCJBmo&callback=initMap&libraries=places&v=weekly"
       async
     ></script>
     <script src="./src/menu.js"></script>
+    <script src="./src/scripts/destination.js"></script>
   </body>
 </html>
