@@ -58,8 +58,8 @@ const destinations = {
 		`,
     hotel: "Hotel Aventura br",
     location: {
-      lat: -20.166646,
-      lng: -46.6754215,
+      lat: -20.1447343, 
+      lng: -46.6619835,
     },
     img: "./img/pacages/jalapao.jpg",
   },
@@ -68,10 +68,13 @@ const destinations = {
     star: 4.9,
     price: 3600,
     days: "4 dias",
+    description: `
+		Bonito é simplesmente o melhor destino para mergulho fluvial do Brasil. Na nascente cristalina do Rio Baía Bonita, que forma o Aquário Natural, ou no Rio Sucuri, de leve correnteza, você nada lado a a lado com diversas espécies de peixes coloridos.
+		`,
     hotel: "Hotel Nemo",
     location: {
-      lat: -21.1238793,
-      lng: -56.5083537,
+      lat: -21.1245569,
+      lng: -56.4878942,
     },
     img: "./img/pacages/jalapao.jpg",
   },
@@ -110,17 +113,23 @@ function renderInfoPackages(obj = destinations.Jalapao) {
 							<p> pacote de ${days} por apenas: </p>
               <p>12x de <span class="text-3xl text-yellow-300">${(
                 price / 12
-              ).toLocaleString(`pt-br`,{style: 'currency', currency: 'BRL'})}</span></p>
-              <p>ou ${price.toLocaleString(`pt-br`,{style: 'currency', currency: 'BRL'})}</p>
-              <button onclick="clickMe()" class="text-gray-800 bg-yellow-300 p-3 mt-2 ">
-                Comprar agora
-              </button>
+              ).toLocaleString(`pt-br`, {
+                style: "currency",
+                currency: "BRL",
+              })}</span></p>
+              <p>ou ${price.toLocaleString(`pt-br`, {
+                style: "currency",
+                currency: "BRL",
+              })}</p>
+              <a href="index.html#contato" class="text-gray-800 bg-yellow-300 transition-colors hover:bg-yellow-400 hover:text-gray-700 p-3 my-2 inline-block ">
+                Solicitar agora
+              </a>
 	`;
 }
 
-function clickMe (el) {
-	console.log(this)
-	console.log("clicou me")
+function clickMe(el) {
+  console.log(this);
+  console.log("clicou me");
 }
 
 function initMap(
